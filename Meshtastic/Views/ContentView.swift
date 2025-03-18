@@ -54,5 +54,8 @@ struct ContentView: View {
 			.tag(NavigationState.Tab.settings)
 		}
 		.toolbarBackground(.visible, for: .tabBar)
+		.onAppear {
+			UITabBar.appearance().scrollEdgeAppearance = UITabBarAppearance.init(idiom: .unspecified)
+		}
 	}
 }
